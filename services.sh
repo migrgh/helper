@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STOP="systemd-resolved systemd-timesyncd systemd-timedated systemd-homed systemd-userdbd systemd-userdbd.socket"
+STOP="wsdd systemd-resolved systemd-timesyncd systemd-timedated systemd-homed systemd-userdbd systemd-userdbd.socket"
 
 sudo systemctl stop $STOP
 sudo systemctl mask $STOP
