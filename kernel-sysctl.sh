@@ -33,7 +33,7 @@ vm.mmap_rnd_compat_bits=16
 fs.protected_symlinks=1
 fs.protected_hardlinks=1
 fs.protected_fifos=2
-fs.protected_regular=2" | sudo tee -a /etc/sysctl.d/local.conf > /dev/null
+fs.protected_regular=2" | sudo tee /etc/sysctl.d/local.conf > /dev/null
 
 sudo systemctl restart systemd-sysctl.service
 sudo journalctl -u systemd-sysctl.service --since="-1m"
