@@ -19,7 +19,7 @@ Gateway=$GATEWAY
 " | sudo tee -a /etc/systemd/network/$IFNAME.network > /dev/null
 
 sudo rm /etc/resolv.conf
-echo "$GATEWAY" | sudo tee -a /etc/resolv.conf > /dev/null
+echo "nameserver $GATEWAY" | sudo tee -a /etc/resolv.conf > /dev/null
 
 sudo systemctl disable systemd-resolved.service
 sudo systemctl mask systemd-resolved.service
